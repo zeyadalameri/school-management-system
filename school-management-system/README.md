@@ -22,6 +22,19 @@
 - فواتير الرسوم والمدفوعات
 - المستخدمون والأدوار
 
+## لقطات شاشة (Screenshots)
+
+> صور من لوحة التحكم (Filament)
+
+### تسجيل الدخول
+![Login](public/screenshots/login.png)
+
+### السنوات الدراسية
+![Academic Years](public/screenshots/academic-years.png)
+
+### فواتير الرسوم
+![Fees Invoices](public/screenshots/fees-invoices.png)
+
 ## التشغيل المحلي
 
 1. شغل Apache و MySQL من XAMPP.
