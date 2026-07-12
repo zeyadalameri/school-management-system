@@ -7,13 +7,13 @@
 ## 📸 Screenshots
 
 ### صفحة تسجيل الدخول
-![Login](school-management-system/screenshots/login.jpg)
+![Login](school-management-system/screenshots/login.png)
 
 ### السنوات الدراسية
-![Academic Years](school-management-system/screenshots/academic-years-3.jpg)
+![Academic Years](school-management-system/screenshots/academic-years.png)
 
 ### فواتير الرسوم
-![Fee Invoices](school-management-system/screenshots/fees-invoices-2.jpg)
+![Fee Invoices](school-management-system/screenshots/fees-invoices.png)
 
 ---
 
