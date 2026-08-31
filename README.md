@@ -1,115 +1,64 @@
-# 🏫 نظام إدارة المدرسة — School Management System
+# School Management System
 
-نظام متكامل لإدارة المدارس مبني بـ **Laravel** و **Filament**، يغطي جميع العمليات الأكاديمية والمالية والإدارية.
+A Laravel administration application for managing core school operations through a Filament dashboard. The project models academic structure, students, guardians, staff, attendance, assessments, marks, and fee records.
 
----
+## Key Features
 
-## 📸 Screenshots
+- Academic years, grade levels, sections, and subjects
+- Student, guardian, teacher, and enrolment records
+- Attendance records, assessments, and marks
+- Fee invoices and payments
+- Role-based access using Spatie Laravel Permission
+- Administrative resources built with Filament
+- Seeded sample academic data for local evaluation
 
-### صفحة تسجيل الدخول
-![Login](school-management-system/screenshots/login.png)
+## Tech Stack
 
-### السنوات الدراسية
-![Academic Years](school-management-system/screenshots/academic-years.png)
+- PHP 8+
+- Laravel 9
+- Filament 2
+- MySQL
+- Tailwind CSS 3
+- Laravel Mix 6
+- Spatie Laravel Permission
 
-### فواتير الرسوم
-![Fee Invoices](school-management-system/screenshots/fees-invoices.png)
+## Architecture
 
----
+The application follows Laravel's MVC structure. Eloquent models represent the school domain, migrations define the relational schema, Filament resources provide administrative CRUD workflows, and roles control dashboard access.
 
-## ✨ المميزات
+## Screenshots
 
-- 📅 **إدارة السنوات الدراسية** — إنشاء وتتبع السنوات الدراسية النشطة
-- 🏫 **الصفوف والشعب** — إدارة الفصول الدراسية والسعات
-- 👨‍🏫 **المعلمون** — ملفات المعلمين والتخصصات
-- 👨‍👧 **أولياء الأمور والطلاب** — ربط الطلاب بأولياء أمورهم
-- 📝 **التسجيلات** — تسجيل الطلاب في الفصول
-- 📊 **التقييمات والدرجات** — تتبع الأداء الأكاديمي
-- ✅ **الحضور** — تسجيل حضور وغياب الطلاب
-- 💰 **الفواتير والمدفوعات** — إدارة الرسوم المالية
-- 👥 **إدارة المستخدمين** — أدوار متعددة (مدير، محاسب، معلم)
+| Sign in | Academic years | Fee invoices |
+| --- | --- | --- |
+| ![School Management sign-in screen](school-management-system/screenshots/login.png) | ![Academic years resource](school-management-system/screenshots/academic-years.png) | ![Fee invoices resource](school-management-system/screenshots/fees-invoices.png) |
 
----
-
-## 🛠️ التقنيات المستخدمة
-
-| التقنية | الوصف |
-|---|---|
-| Laravel 9 | إطار العمل الرئيسي |
-| Filament 2 | لوحة التحكم |
-| PHP 8.0+ | لغة البرمجة |
-| MySQL | قاعدة البيانات |
-| Tailwind CSS 3 | التصميم |
-| Laravel Mix 6 | بناء الأصول |
-
----
-
-## 🚀 التثبيت
+## Getting Started
 
 ```bash
-# 1. استنساخ المشروع
-git clone https://github.com/zeyadalameri/school-management-system.git
-cd school-management-system/school-management-system
-
-# 2. تثبيت التبعيات
-composer install
-npm install
-
-# 3. إعداد البيئة
+cd school-management-system
 cp .env.example .env
+composer install
 php artisan key:generate
-
-# 4. إعداد قاعدة البيانات في .env
-# DB_DATABASE=school_db
-# DB_USERNAME=root
-# DB_PASSWORD=
-
-# 5. تشغيل Migrations والـ Seeders
-php artisan migrate --seed
-
-# 6. تشغيل المشروع
-php artisan serve
+npm install
 npm run dev
+php artisan migrate --seed
+php artisan serve
 ```
 
----
+Create a MySQL database and update the local `.env` before running migrations. The seeder creates a clearly labelled local demo administrator (`admin@school.test` / `password`) together with sample academic records. Use it only in a disposable development environment and replace it before any shared deployment.
 
-## 🔐 بيانات الدخول التجريبية
+## My Role
 
-| الحقل | القيمة |
-|---|---|
-| البريد الإلكتروني | `admin@school.test` |
-| كلمة المرور | `password` |
-| الدور | Super Admin |
+I designed and implemented the Laravel data model, migrations, administrative resources, role model, sample data, and dashboard workflows.
 
----
+## Skills Demonstrated
 
-## 📁 هيكل المشروع
+Laravel application architecture, relational data modelling, Filament administration, authorization, migrations and seeders, MySQL, and Tailwind-based interfaces.
 
-```
-school-management-system/
-├── app/
-│   ├── Filament/          # Resources & Pages
-│   ├── Models/            # Eloquent Models
-│   └── ...
-├── database/
-│   ├── migrations/        # Database Tables
-│   └── seeders/           # Sample Data
-├── resources/
-│   └── views/             # Blade Templates
-└── routes/
-    └── web.php
-```
+## Project Status and Limitations
 
----
+This is a portfolio and academic management system, not a production deployment. Before real institutional use it would need broader automated testing, deployment configuration, backup and audit procedures, privacy review, and organization-specific workflows.
 
-## 👤 المطور
+## License
 
-**Zeyad Al-Ameri**  
-[![GitHub](https://img.shields.io/badge/GitHub-zeyadalameri-black?logo=github)](https://github.com/zeyadalameri)
-
----
-
-## 📄 الرخصة
-
-هذا المشروع مفتوح المصدر تحت رخصة [MIT](LICENSE).
+No open-source license has been declared.
